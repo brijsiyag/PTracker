@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+.sidebar-container {
+  background-color: #393e46;
+  height: 100vh;
+}
+.sidebar-app-heading-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+  background-color: #222831;
+  color: white;
+}
+.sidebar-app-heading {
+  font-family: 'Monoton', cursive;
+  border-radius: 5px;
+  /* background-color: rgb(255, 255, 255); */
+  padding: 10px;
+  margin: 0;
+}
+.sidebar-project-open-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+.sidebar-header {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  flex-direction: column;
+  border-radius: 5px;
+  border-bottom: 1px solid gray;
+}
+.sidebar-project-name {
+  text-transform: capitalize;
+  font-weight: 900;
+  font-size: x-large;
+}
+.sidebar-modules-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #222831;
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  color: rgb(139, 139, 255);
+}

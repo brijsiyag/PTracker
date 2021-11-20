@@ -46,7 +46,6 @@ export default merge(baseConfig, {
       }),
     ],
   },
-
   plugins: [
     new BundleAnalyzerPlugin({
       analyzerMode:

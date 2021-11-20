@@ -11,12 +11,11 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import path from 'path';
-import { app, BrowserWindow, shell, ipcMain } from 'electron';
+import { app, BrowserWindow, shell, ipcMain, dialog } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
 import { resolveHtmlPath } from './util';
-
 export default class AppUpdater {
   constructor() {
     log.transports.file.level = 'info';
@@ -70,17 +69,17 @@ const createWindow = async () => {
   const getAssetPath = (...paths: string[]): string => {
     return path.join(RESOURCES_PATH, ...paths);
   };
-
   mainWindow = new BrowserWindow({
     show: false,
     width: 1024,
     height: 728,
     icon: getAssetPath('icon.png'),
     webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false,
       preload: path.join(__dirname, 'preload.js'),
     },
   });
-
   mainWindow.loadURL(resolveHtmlPath('index.html'));
 
   mainWindow.on('ready-to-show', () => {
@@ -93,7 +92,6 @@ const createWindow = async () => {
       mainWindow.show();
     }
   });
-
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
@@ -106,10 +104,12 @@ const createWindow = async () => {
     event.preventDefault();
     shell.openExternal(url);
   });
-
-  // Remove this if your app does not use auto updates
-  // eslint-disable-next-line
-  new AppUpdater();
+  ipcMain.on('getFile', async () => {
+    const filePath = await dialog.showOpenDialog({
+      properties: ['openDirectory'],
+    });
+    mainWindow?.webContents.send('setFile', filePath);
+  });
 };
 
 /**

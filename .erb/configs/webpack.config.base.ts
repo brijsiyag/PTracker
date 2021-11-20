@@ -5,7 +5,7 @@
 import webpack from 'webpack';
 import webpackPaths from './webpack.paths';
 import { dependencies as externals } from '../../release/app/package.json';
-
+import path from 'path';
 export default {
   externals: [...Object.keys(externals || {})],
 
@@ -22,7 +22,6 @@ export default {
       },
     ],
   },
-
   output: {
     path: webpackPaths.srcPath,
     // https://github.com/webpack/webpack/issues/1114
@@ -37,6 +36,10 @@ export default {
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
     modules: [webpackPaths.srcPath, 'node_modules'],
+    fallback: {
+      fs: false,
+      path: false,
+    },
   },
 
   plugins: [
@@ -44,4 +47,8 @@ export default {
       NODE_ENV: 'production',
     }),
   ],
+  node: {
+    __dirname: false,
+    __filename: false,
+  },
 };

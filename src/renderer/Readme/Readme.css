@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+.readme-container {
+  padding: 10px 30px;
+  background-color: #161c25;
+  min-height: 100vh;
+  letter-spacing: 0.1px;
+}
+
+.readme-heading-container {
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+
+.readme-heading {
+  font-family: 'Racing Sans One', cursive !important;
+  margin: auto !important;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 2.5rem !important;
+}
+#readme-main {
+  margin: auto;
+  line-height: 1.6;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+.readme-container div,
+.readme-container ul,
+.readme-container li {
+  color: white;
+}
+.readme-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.65;
+  letter-spacing: 0.1px;
+  color: white;
+}
+.readme-container h1,
+.readme-container h2,
+.readme-container h3,
+.readme-container h4,
+.readme-container h5,
+.readme-container h6 {
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 8px 0 16px 0;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+.readme-container code {
+  background-color: #222831;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 0.7rem;
+  color: white;
+}
+.readme-container pre code {
+  border: none;
+}
+.readme-container pre {
+  color: white;
+  background-color: #222831;
+  font-family: courier, monospace;
+  color: rgb(41, 41, 41);
+  width: fit-content;
+  max-width: 95%;
+  padding: 0 5px;
+  border-radius: 3px;
+  margin: 5px 0;
+  overflow-x: auto;
+}

@@ -1,0 +1,15 @@
+.Homepage-main-container {
+  display: flex;
+}
+.Homepage-sidebar-container {
+  flex-basis: 25%;
+  border: 1px solid gray;
+  height: 100vh;
+  overflow: auto;
+}
+.Homepage-readme-container {
+  flex-basis: 75%;
+  border: 1px solid gray;
+  height: 100vh;
+  overflow: auto;
+}
