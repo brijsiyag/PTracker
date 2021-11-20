@@ -6,7 +6,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/index.html" element={<Homepage />} />
+        <Route path="/*" element={<Homepage />} />
       </Routes>
     </BrowserRouter>
   );

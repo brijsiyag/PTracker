@@ -61,7 +61,6 @@ const createWindow = async () => {
   if (isDevelopment) {
     await installExtensions();
   }
-
   const RESOURCES_PATH = app.isPackaged
     ? path.join(process.resourcesPath, 'assets')
     : path.join(__dirname, '../../assets');
@@ -71,8 +70,10 @@ const createWindow = async () => {
   };
   mainWindow = new BrowserWindow({
     show: false,
-    width: 1024,
+    width: 1224,
     height: 728,
+    minWidth: 1224,
+    minHeight: 728,
     icon: getAssetPath('icon.png'),
     webPreferences: {
       nodeIntegration: true,
