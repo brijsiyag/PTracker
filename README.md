@@ -24,4 +24,5 @@ npm run package
 
 ### Project is currently under development
 
-## <a href="https://drive.google.com/file/d/1OO0HfRemY3-w4UBtyeSbPIFDbGTzxn86/view?usp=sharing">Take a look</a>
+https://user-images.githubusercontent.com/71015892/227744615-f7d28b32-ed4d-49c7-9a41-0423a4490681.mp4
+
